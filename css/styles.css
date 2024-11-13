@@ -170,3 +170,195 @@ footer {
 .card {
     animation: fadeIn 0.5s ease-out forwards;
 }
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background: var(--accent-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.history-table th,
+.history-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.history-table th {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+}
+
+.history-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Style unifié pour tous les tableaux */
+.history-table,
+.economy-table,
+.environment-table,
+.social-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background: var(--accent-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.history-table th,
+.economy-table th,
+.environment-table th,
+.social-table th,
+.history-table td,
+.economy-table td,
+.environment-table td,
+.social-table td {
+    padding: 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(0,124,60,0.1);
+}
+
+.history-table th,
+.economy-table th,
+.environment-table th,
+.social-table th {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.history-table tr:hover,
+.economy-table tr:hover,
+.environment-table tr:hover,
+.social-table tr:hover {
+    background-color: rgba(0,124,60,0.05);
+}
+
+/* Styles pour les images dans les cards */
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Styles pour les listes personnalisées */
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.custom-list li:last-child {
+    border-bottom: none;
+}
+/* Styles pour la liste écologique */
+.eco-list {
+    list-style: none;
+    padding: 0;
+}
+
+.eco-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.eco-list li:before {
+    content: "•";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Styles pour les images des cartes environnementales */
+.card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.card-image:hover {
+    transform: scale(1.02);
+}
+
+/* Styles pour les tableaux sociaux */
+.social-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background: var(--accent-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.social-table th,
+.social-table td {
+    padding: 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(242,56,56,0.1);
+}
+
+.social-table th {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.social-table tr:hover {
+    background-color: rgba(242,56,56,0.05);
+}
+
+/* Liste sociale */
+.social-list {
+    list-style: none;
+    padding: 0;
+}
+
+.social-list li {
+    padding: 1rem;
+    border-left: 3px solid var(--secondary-color);
+    margin-bottom: 1rem;
+    background-color: rgba(0,124,60,0.05);
+    border-radius: 0 8px 8px 0;
+}
+
+/* Grille culturelle */
+.culture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.culture-item {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: rgba(0,124,60,0.05);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.culture-item:hover {
+    transform: translateY(-5px);
+}
+
+.culture-item h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}

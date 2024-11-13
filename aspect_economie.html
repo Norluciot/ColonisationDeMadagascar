@@ -8,71 +8,132 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="site-header">
+        <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="aspect_historique.html">Histoire</a></li>
                 <li><a href="aspect_economie.html">Économie</a></li>
                 <li><a href="aspect_environnement.html">Environnement</a></li>
                 <li><a href="aspect_societal.html">Social</a></li>
+                <li><a href="aspect_scientifique.html">Science</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <h1>L'Économie Coloniale de Madagascar</h1>
+    <main class="site-main">
+        <article class="main-content">
+            <h1>L'Économie Coloniale de Madagascar</h1>
 
-        <div class="card">
-            <h2>Productions Principales</h2>
-            <table class="economy-table">
-                <thead>
-                    <tr>
-                        <th>Produit</th>
-                        <th>Région</th>
-                        <th>Impact Économique</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Vanille</td>
-                        <td>SAVA</td>
-                        <td>Premier producteur mondial</td>
-                    </tr>
-                    <tr>
-                        <td>Café</td>
-                        <td>Côte Est</td>
-                        <td>Export majeur colonial</td>
-                    </tr>
-                    <tr>
-                        <td>Girofle</td>
-                        <td>Analanjirofo</td>
-                        <td>Production stratégique</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <section class="production-section">
+                <h2>Productions Principales</h2>
+                <table class="economy-table">
+                    <thead>
+                        <tr>
+                            <th>Produit</th>
+                            <th>Région</th>
+                            <th>Volume Annuel</th>
+                            <th>Impact Économique</th>
+                            <th>Marché Principal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vanille</td>
+                            <td>SAVA</td>
+                            <td>2000 tonnes</td>
+                            <td>Premier producteur mondial</td>
+                            <td>Europe</td>
+                        </tr>
+                        <tr>
+                            <td>Café</td>
+                            <td>Côte Est</td>
+                            <td>5000 tonnes</td>
+                            <td>Export majeur colonial</td>
+                            <td>France</td>
+                        </tr>
+                        <tr>
+                            <td>Girofle</td>
+                            <td>Analanjirofo</td>
+                            <td>8000 tonnes</td>
+                            <td>Production stratégique</td>
+                            <td>Asie</td>
+                        </tr>
+                        <tr>
+                            <td>Riz</td>
+                            <td>Alaotra-Mangoro</td>
+                            <td>15000 tonnes</td>
+                            <td>Consommation locale</td>
+                            <td>Marché intérieur</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-        <section class="content-grid">
-            <div class="card">
-                <h2>Infrastructure Coloniale</h2>
-                <p>Développement du réseau ferroviaire</p>
-                <p>Construction des ports principaux</p>
+            <div class="content-grid">
+                <section class="infrastructure">
+                    <h2>Infrastructure Coloniale</h2>
+                    <div class="infra-details">
+                        <h3>Réseau Ferroviaire</h3>
+                        <ul>
+                            <li>Ligne Tananarive-Tamatave (1913)</li>
+                            <li>Ligne Fianarantsoa-Manakara (1936)</li>
+                            <li>Impact sur le commerce intérieur</li>
+                        </ul>
+                        <h3>Ports Maritimes</h3>
+                        <ul>
+                            <li>Développement de Tamatave</li>
+                            <li>Modernisation de Majunga</li>
+                            <li>Installation des quais de Diego-Suarez</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <aside class="economic-impact">
+                    <h2>Système Commercial Colonial</h2>
+                    <div class="commerce-grid">
+                        <div class="commerce-item">
+                            <h3>Comptoirs Commerciaux</h3>
+                            <ul>
+                                <li>Réseau de collecte</li>
+                                <li>Points d'exportation</li>
+                                <li>Centres de stockage</li>
+                            </ul>
+                        </div>
+                        <div class="commerce-item">
+                            <h3>Relations Commerciales</h3>
+                            <ul>
+                                <li>Commerce avec la métropole</li>
+                                <li>Échanges régionaux</li>
+                                <li>Marchés locaux</li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
             </div>
-
-            <div class="card">
-                <h2>Commerce Colonial</h2>
-                <ul class="custom-list">
-                    <li>Établissement des comptoirs commerciaux</li>
-                    <li>Relations commerciales avec la métropole</li>
-                    <li>Système d'exploitation des ressources</li>
-                </ul>
-            </div>
-        </section>
+        </article>
     </main>
 
-    <footer>
-        <p>© 2024 - Histoire de Madagascar | Tous droits réservés</p>
-    </footer>
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>À propos</h4>
+            <p>Site éducatif sur l'histoire coloniale de Madagascar</p>
+        </div>
+        <div class="footer-section">
+            <h4>Ressources</h4>
+            <ul class="footer-links">
+                <li><a href="liens-utiles.html">Liens Utiles</a></li>
+                <li><a href="sources.html">Sources</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>contact@histoire-madagascar.org</p>
+        </div>
+        <p class="copyright">© 2024 - Histoire de Madagascar | Tous droits réservés</p>
+    </div>
+</footer>
+
 </body>
 </html>

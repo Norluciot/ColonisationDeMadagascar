@@ -8,19 +8,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="site-header">
+        <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="aspect_historique.html">Histoire</a></li>
                 <li><a href="aspect_economie.html">Économie</a></li>
                 <li><a href="aspect_environnement.html">Environnement</a></li>
                 <li><a href="aspect_societal.html">Social</a></li>
+                <li><a href="aspect_scientifique.html">Science</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="site-main">
         <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/malgaches.jpeg');">
             <div class="hero-content">
                 <h1>Madagascar : L'Héritage Colonial</h1>
@@ -28,24 +29,56 @@
             </div>
         </section>
 
-        <section class="content-grid">
-            <div class="card">
-                <h2>Histoire</h2>
-                <p>De la période précoloniale à l'indépendance : découvrez les moments clés de l'histoire malgache.</p>
-            </div>
-            <div class="card">
-                <h2>Impact Économique</h2>
-                <p>L'évolution économique de Madagascar pendant et après la colonisation.</p>
-            </div>
-            <div class="card">
-                <h2>Héritage Social</h2>
-                <p>Les transformations sociales et culturelles de la société malgache.</p>
-            </div>
-        </section>
+        <article class="main-content">
+            <section class="content-grid">
+                <div class="card">
+                    <h2>Histoire</h2>
+                    <p>De la période précoloniale à l'indépendance : découvrez les moments clés de l'histoire malgache.</p>
+                    <a href="aspect_historique.html" class="btn">En savoir plus</a>
+                </div>
+                <div class="card">
+                    <h2>Impact Économique</h2>
+                    <p>L'évolution économique de Madagascar pendant et après la colonisation.</p>
+                    <a href="aspect_economie.html" class="btn">En savoir plus</a>
+                </div>
+                <div class="card">
+                    <h2>Héritage Social</h2>
+                    <p>Les transformations sociales et culturelles de la société malgache.</p>
+                    <a href="aspect_societal.html" class="btn">En savoir plus</a>
+                </div>
+            </section>
+
+            <aside class="quick-facts">
+                <h3>Faits Marquants</h3>
+                <ul>
+                    <li>1896 : Début de la colonisation française</li>
+                    <li>1960 : Indépendance de Madagascar</li>
+                    <li>Plus grande île de l'océan Indien</li>
+                </ul>
+            </aside>
+        </article>
     </main>
 
-    <footer>
-        <p>&copy; 2024 - Madagascar Colonial | Tous droits réservés</p>
-    </footer>
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>À propos</h4>
+            <p>Site éducatif sur l'histoire coloniale de Madagascar</p>
+        </div>
+        <div class="footer-section">
+            <h4>Ressources</h4>
+            <ul class="footer-links">
+                <li><a href="liens-utiles.html">Liens Utiles</a></li>
+                <li><a href="sources.html">Sources</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>contact@histoire-madagascar.org</p>
+        </div>
+        <p class="copyright">© 2024 - Histoire de Madagascar | Tous droits réservés</p>
+    </div>
+</footer>
+
 </body>
 </html>

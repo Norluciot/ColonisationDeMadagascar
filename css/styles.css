@@ -1,15 +1,30 @@
-/* Variables globales avec les couleurs du drapeau malgache */
+/* ==========================================================================
+   1. Design System & Variables
+   ========================================================================== */
 :root {
-    --primary-color: #f23838;    /* Rouge du drapeau malgache */
-    --secondary-color: #007c3c;  /* Vert du drapeau malgache */
-    --accent-color: #ffffff;     /* Blanc du drapeau malgache */
-    --text-color: #2c3e50;
-    --background-color: #f9f9f9;
-    --header-font: 'Playfair Display', serif;
+    /* Madagascar Flag Colors */
+    --mg-red: #fc3d32;
+    --mg-green: #007c3b;
+    --mg-white: #ffffff;
+
+    /* Supporting Colors */
+    --light-bg: #f8f9fa;
+    --dark-text: #2c3e50;
+    --shadow-soft: 0 4px 6px rgba(0,0,0,0.05);
+    --shadow-medium: 0 8px 15px rgba(0,0,0,0.1);
+
+    /* Typography */
+    --title-font: 'Playfair Display', serif;
     --body-font: 'Open Sans', sans-serif;
+
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+    --transition-smooth: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Reset et styles de base */
+/* ==========================================================================
+   2. Reset & Base Styles
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -19,346 +34,579 @@
 body {
     font-family: var(--body-font);
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
+    color: var(--dark-text);
+    background-color: var(--light-bg);
 }
 
-header {
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-    padding: 1.5rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+/* ==========================================================================
+   3. Typography & Text Styles
+   ========================================================================== */
+h1, h2, h3, h4 {
+    font-family: var(--title-font);
+    font-weight: 700;
+    line-height: 1.2;
 }
 
-nav ul {
-    list-style: none;
+h1 {
+    font-family: var(--title-font);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--mg-green);
+    text-align: center;
+    margin: 3rem auto 2rem;
+    padding-bottom: 1rem;
+    position: relative;
+    max-width: 1200px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 4px;
+    background: linear-gradient(to right, var(--mg-red), var(--mg-green));
+    border-radius: 2px;
+}
+
+/* Hero Section Title */
+.hero-content h1 {
+    color: var(--mg-white);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    margin: 0;
+    padding: 0;
+}
+
+.hero-content h1::after {
+    display: none;
+}
+h2 {
+    font-size: 2.5rem;
+    color: var(--mg-green);
+    margin-bottom: 1.2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: var(--mg-red);
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   4. Layout Components
+   ========================================================================== */
+/* 4.1 Header & Navigation */
+.site-header {
+    background: var(--mg-white);
+    box-shadow: var(--shadow-soft);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.main-nav ul {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 2rem;
+    list-style: none;
 }
 
-nav a {
-    color: var(--accent-color);
+.main-nav a {
+    color: var(--dark-text);
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    padding: 0.5rem 1rem;
+    font-weight: 600;
+    padding: 0.8rem 1.2rem;
     border-radius: 4px;
+    transition: var(--transition-fast);
 }
 
-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
+.main-nav a:hover {
+    background: var(--mg-green);
+    color: var(--mg-white);
 }
 
-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 2rem;
-}
+/* 4.2 Hero Section */
 .hero {
-    height: 60vh;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/Madagascar.jpeg');
+    height: 80vh;
     background-size: cover;
     background-position: center;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    color: var(--accent-color);
-    margin-bottom: 3rem;
-    border-radius: 15px;
 }
 
-/* Styles pour les images */
-.history-image, .people-image {
-    width: 100%;
-    margin: 2rem 0;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.history-image img, .people-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.history-image img:hover, .people-image img:hover {
-    transform: scale(1.02);
-}
 .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--mg-white);
+    max-width: 800px;
     padding: 2rem;
-    background-color: rgba(0,0,0,0.6);
-    border-radius: 10px;
 }
 
-h1, h2, h3 {
-    font-family: var(--header-font);
-    margin-bottom: 1.5rem;
-    color: var(--primary-color);
+/* ==========================================================================
+   5. Content Components
+   ========================================================================== */
+/* Content Grid Layout */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 3rem auto;
+    padding: 2rem;
+    position: relative;
 }
 
+/* Section Styling */
+section {
+    margin: 4rem 0;
+    padding: 2rem;
+    background: var(--mg-white);
+    border-radius: 15px;
+    box-shadow: var(--shadow-medium);
+}
+
+/* Specialized Sections */
+.deforestation-section,
+.biodiversity-section,
+.research-section,
+.education-section,
+.social-transformations,
+.cultural-heritage {
+    border-left: 4px solid var(--mg-green);
+    padding-left: 2.5rem;
+}
+
+.scientific-institutions,
+.economic-impact,
+.historical-period {
+    border-right: 4px solid var(--mg-red);
+    padding-right: 2.5rem;
+}
+
+/* Section Headers */
+section h2 {
+    font-size: 2.2rem;
+    color: var(--mg-green);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, var(--mg-red), var(--mg-green));
+}
+
+/* Section Content */
+.section-content {
+    margin-top: 2rem;
+}
+
+/* Grid Items */
+.grid-item {
+    background: var(--mg-white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition-smooth);
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+/* Container for Content Organization */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.main-content {
+    margin: 3rem 0;
+}
+
+/* 5.2 Tables */
+.data-wrapper {
+    overflow-x: auto;
+    margin: 2rem 0;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2rem auto;
+    max-width: 1200px;
+    background: var(--mg-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+}
+
+.data-table thead {
+    background: var(--mg-green);
+}
+
+.data-table th {
+    color: var(--mg-white);
+    padding: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.data-table td {
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    transition: background 0.3s ease;
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.data-table tbody tr:hover td {
+    background: rgba(0,124,59,0.05);
+}
+
+/* Shared Table Styles for All Pages */
+.economy-table,
+.history-table,
+.environment-table,
+.social-table,
+.science-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2rem auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+}
+
+.economy-table th,
+.history-table th,
+.environment-table th,
+.social-table th,
+.science-table th {
+    background: var(--mg-green);
+    color: var(--mg-white);
+    padding: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.economy-table td,
+.history-table td,
+.environment-table td,
+.social-table td,
+.science-table td {
+    padding: 1.2rem 1.5rem;
+    background: var(--mg-white);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.economy-table tr:hover td,
+.history-table tr:hover td,
+.environment-table tr:hover td,
+.social-table tr:hover td,
+.science-table tr:hover td {
+    background: rgba(0,124,59,0.05);
+}/* Card Styles */
 .content-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin: 2rem 0;
+    padding: 2rem;
 }
 
 .card {
-    background: var(--accent-color);
+    background: var(--mg-white);
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-top: 4px solid var(--primary-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow-medium);
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .card h2 {
-    color: var(--secondary-color);
-    font-size: 1.5rem;
+    color: var(--mg-green);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--mg-red);
+    padding-bottom: 0.5rem;
 }
 
-.card p {
-    margin-bottom: 1rem;
-    color: var(--text-color);
+.card ul {
+    list-style: none;
+    padding-left: 1rem;
 }
 
-footer {
-    background-color: var(--secondary-color);
-    color: var(--accent-color);
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: 3rem;
+.card li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
 }
 
-/* Styles responsifs */
+.card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--mg-red);
+}
+
+/* 5.3 Quick Facts */
+.quick-facts {
+    background: var(--mg-white);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 3rem auto;
+    max-width: 800px;
+    box-shadow: var(--shadow-medium);
+}
+
+.quick-facts h3 {
+    color: var(--mg-green);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--mg-red);
+}
+
+/* ==========================================================================
+   6. Footer
+   ========================================================================== */
+.site-footer {
+    background: var(--mg-green);
+    color: var(--mg-white);
+    padding: 4rem 0 2rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    padding: 0 2rem;
+}
+
+/* ==========================================================================
+   7. Responsive Design
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
-    nav ul {
+    .main-nav ul {
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
-    }
-
-    .hero {
-        height: 40vh;
     }
 
     .content-grid {
         grid-template-columns: 1fr;
     }
-
-    main {
-        padding: 0 1rem;
-    }
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Aside Sections Styling */
+.historical-impact,
+.economic-impact,
+.landscape-changes,
+.scientific-legacy {
+    background: var(--mg-white);
+    border-radius: 15px;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-medium);
+    border-left: 4px solid var(--mg-red);
 }
 
-.card {
-    animation: fadeIn 0.5s ease-out forwards;
+/* Aside Headers */
+.historical-impact h2,
+.economic-impact h2,
+.landscape-changes h2,
+.scientific-legacy h2 {
+    color: var(--mg-green);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 3px solid var(--mg-red);
 }
 
-.history-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0;
-    background: var(--accent-color);
-    border-radius: 8px;
-    overflow: hidden;
+/* Content Grids within Asides */
+.impact-content,
+.commerce-grid,
+.landscape-grid,
+.legacy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
 }
 
-.history-table th,
-.history-table td {
-    padding: 1rem;
-    text-align: left;
-    border-bottom: 1px solid #eee;
-}
-
-.history-table th {
-    background-color: var(--primary-color);
-    color: var(--accent-color);
-}
-
-.history-table tr:hover {
-    background-color: #f5f5f5;
-}
-
-/* Style unifié pour tous les tableaux */
-.history-table,
-.economy-table,
-.environment-table,
-.social-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0;
-    background: var(--accent-color);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.history-table th,
-.economy-table th,
-.environment-table th,
-.social-table th,
-.history-table td,
-.economy-table td,
-.environment-table td,
-.social-table td {
-    padding: 1.2rem;
-    text-align: left;
-    border-bottom: 1px solid rgba(0,124,60,0.1);
-}
-
-.history-table th,
-.economy-table th,
-.environment-table th,
-.social-table th {
-    background-color: var(--secondary-color);
-    color: var(--accent-color);
-    font-weight: 600;
-}
-
-.history-table tr:hover,
-.economy-table tr:hover,
-.environment-table tr:hover,
-.social-table tr:hover {
-    background-color: rgba(0,124,60,0.05);
-}
-
-/* Styles pour les images dans les cards */
-.card-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
+/* Content Items */
+.impact-content h3,
+.commerce-item h3,
+.landscape-item h3,
+.legacy-item h3 {
+    color: var(--mg-red);
+    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-/* Styles pour les listes personnalisées */
-.custom-list {
+/* Lists within Asides */
+.impact-content ul,
+.commerce-item ul,
+.landscape-item ul,
+.legacy-item ul {
     list-style: none;
     padding-left: 0;
 }
 
-.custom-list li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
-}
-
-.custom-list li:last-child {
-    border-bottom: none;
-}
-/* Styles pour la liste écologique */
-.eco-list {
-    list-style: none;
-    padding: 0;
-}
-
-.eco-list li {
+.impact-content li,
+.commerce-item li,
+.landscape-item li,
+.legacy-item li {
     padding: 0.8rem 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
     position: relative;
     padding-left: 1.5rem;
 }
 
-.eco-list li:before {
-    content: "•";
-    color: var(--secondary-color);
+.impact-content li::before,
+.commerce-item li::before,
+.landscape-item li::before,
+.legacy-item li::before {
+    content: '→';
+    color: var(--mg-green);
     position: absolute;
     left: 0;
 }
 
-/* Styles pour les images des cartes environnementales */
-.card-image {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-    transition: transform 0.3s ease;
-}
-
-.card-image:hover {
-    transform: scale(1.02);
-}
-
-/* Styles pour les tableaux sociaux */
-.social-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0;
-    background: var(--accent-color);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.social-table th,
-.social-table td {
-    padding: 1.2rem;
-    text-align: left;
-    border-bottom: 1px solid rgba(242,56,56,0.1);
-}
-
-.social-table th {
-    background-color: var(--primary-color);
-    color: var(--accent-color);
-    font-weight: 600;
-}
-
-.social-table tr:hover {
-    background-color: rgba(242,56,56,0.05);
-}
-
-/* Liste sociale */
-.social-list {
+.resource-list {
     list-style: none;
     padding: 0;
 }
 
-.social-list li {
-    padding: 1rem;
-    border-left: 3px solid var(--secondary-color);
-    margin-bottom: 1rem;
-    background-color: rgba(0,124,60,0.05);
-    border-radius: 0 8px 8px 0;
+.resource-list li {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-/* Grille culturelle */
-.culture-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.culture-item {
-    text-align: center;
-    padding: 1.5rem;
-    background-color: rgba(0,124,60,0.05);
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.culture-item:hover {
-    transform: translateY(-5px);
-}
-
-.culture-item h3 {
-    color: var(--secondary-color);
+.resource-list a {
+    color: var(--mg-green);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
     margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.resource-list a:hover {
+    color: var(--mg-red);
+}
+
+.resource-list p {
+    color: var(--dark-text);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.sources-card {
+    background: var(--mg-white);
+    padding: 2.5rem;
+}
+
+.sources-list {
+    list-style: none;
+    padding: 0;
+}
+
+.sources-list li {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.source-title {
+    font-weight: 700;
+    color: var(--mg-green);
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.sources-list p {
+    margin: 0.5rem 0;
+    color: var(--dark-text);
+}
+
+.sources-list a {
+    display: inline-block;
+    color: var(--mg-red);
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.sources-list a:hover {
+    color: var(--mg-green);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: var(--mg-white);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
 }

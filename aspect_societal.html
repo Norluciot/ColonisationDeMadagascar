@@ -8,85 +8,128 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="site-header">
+        <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="aspect_historique.html">Histoire</a></li>
                 <li><a href="aspect_economie.html">Économie</a></li>
                 <li><a href="aspect_environnement.html">Environnement</a></li>
                 <li><a href="aspect_societal.html">Social</a></li>
+                <li><a href="aspect_scientifique.html">Science</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <h1>Impact Social de la Colonisation</h1>
-        <div class="card">
-            <h2>Éducation et Société</h2>
-            <table class="social-table">
-                <thead>
-                    <tr>
-                        <th>Période</th>
-                        <th>Type d'Enseignement</th>
-                        <th>Impact Social</th>
-                        <th>Changements Culturels</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1896-1920</td>
-                        <td>Écoles missionnaires</td>
-                        <td>Alphabétisation initiale</td>
-                        <td>Introduction du christianisme</td>
-                    </tr>
-                    <tr>
-                        <td>1920-1940</td>
-                        <td>École coloniale</td>
-                        <td>Formation des cadres</td>
-                        <td>Émergence d'une élite francophone</td>
-                    </tr>
-                    <tr>
-                        <td>1940-1960</td>
-                        <td>Système mixte</td>
-                        <td>Émergence élites</td>
-                        <td>Syncrétisme culturel</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <section class="content-grid">
-            <div class="card">
-                <h2>Transformations Sociales</h2>
-                <ul class="social-list">
-                    <li>Modification des hiérarchies traditionnelles</li>
-                    <li>Émergence de nouvelles classes sociales</li>
-                    <li>Évolution des modes de vie</li>
-                </ul>
-            </div>
+    <main class="site-main">
+        <article class="main-content">
+            <h1>Impact Social de la Colonisation</h1>
 
-            <div class="card">
-                <h2>Héritage Culturel</h2>
-                <div class="culture-grid">
-                    <div class="culture-item">
-                        <h3>Langue</h3>
-                        <p>Introduction du français</p>
+            <section class="education-section">
+                <h2>Éducation et Société</h2>
+                <table class="social-table">
+                    <thead>
+                        <tr>
+                            <th>Période</th>
+                            <th>Type d'Enseignement</th>
+                            <th>Langue d'Instruction</th>
+                            <th>Impact Social</th>
+                            <th>Changements Culturels</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1896-1920</td>
+                            <td>Écoles missionnaires</td>
+                            <td>Français/Malgache</td>
+                            <td>Alphabétisation initiale</td>
+                            <td>Introduction du christianisme</td>
+                        </tr>
+                        <tr>
+                            <td>1920-1940</td>
+                            <td>École coloniale</td>
+                            <td>Français</td>
+                            <td>Formation des cadres</td>
+                            <td>Émergence d'une élite francophone</td>
+                        </tr>
+                        <tr>
+                            <td>1940-1960</td>
+                            <td>Système mixte</td>
+                            <td>Français/Malgache</td>
+                            <td>Émergence élites</td>
+                            <td>Syncrétisme culturel</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <div class="content-grid">
+                <section class="social-transformations">
+                    <h2>Transformations Sociales</h2>
+                    <div class="transformation-content">
+                        <h3>Structure Sociale</h3>
+                        <ul>
+                            <li>Modification des hiérarchies traditionnelles</li>
+                            <li>Émergence de nouvelles classes sociales</li>
+                            <li>Évolution des modes de vie urbains</li>
+                            <li>Changement des structures familiales</li>
+                        </ul>
                     </div>
-                    <div class="culture-item">
-                        <h3>Religion</h3>
-                        <p>Influence du christianisme</p>
+                </section>
+
+                <section class="cultural-heritage">
+                    <h2>Héritage Culturel</h2>
+                    <div class="culture-grid">
+                        <div class="culture-item">
+                            <h3>Langue et Communication</h3>
+                            <ul>
+                                <li>Bilinguisme français-malgache</li>
+                                <li>Évolution de la littérature</li>
+                                <li>Presse et médias coloniaux</li>
+                            </ul>
+                        </div>
+                        <div class="culture-item">
+                            <h3>Pratiques Religieuses</h3>
+                            <ul>
+                                <li>Coexistence des croyances</li>
+                                <li>Impact du christianisme</li>
+                                <li>Évolution des rituels</li>
+                            </ul>
+                        </div>
+                        <div class="culture-item">
+                            <h3>Arts et Traditions</h3>
+                            <ul>
+                                <li>Fusion des styles artistiques</li>
+                                <li>Évolution de l'artisanat</li>
+                                <li>Préservation des traditions</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="culture-item">
-                        <h3>Traditions</h3>
-                        <p>Syncrétisme culturel</p>
-                    </div>
-                </div>
+                </section>
             </div>
-        </section>
+        </article>
     </main>
 
-    <footer>
-        <p>© 2024 - Histoire de Madagascar | Tous droits réservés</p>
-    </footer>
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>À propos</h4>
+            <p>Site éducatif sur l'histoire coloniale de Madagascar</p>
+        </div>
+        <div class="footer-section">
+            <h4>Ressources</h4>
+            <ul class="footer-links">
+                <li><a href="liens-utiles.html">Liens Utiles</a></li>
+                <li><a href="sources.html">Sources</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>contact@histoire-madagascar.org</p>
+        </div>
+        <p class="copyright">© 2024 - Histoire de Madagascar | Tous droits réservés</p>
+    </div>
+</footer>
+
 </body>
 </html>

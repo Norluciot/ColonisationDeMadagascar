@@ -8,72 +8,125 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="site-header">
+        <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="aspect_historique.html">Histoire</a></li>
                 <li><a href="aspect_economie.html">Économie</a></li>
                 <li><a href="aspect_environnement.html">Environnement</a></li>
                 <li><a href="aspect_societal.html">Social</a></li>
+                <li><a href="aspect_scientifique.html">Science</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <h1>Impact Environnemental de la Colonisation</h1>
+    <main class="site-main">
+        <article class="main-content">
+            <h1>Impact Environnemental de la Colonisation</h1>
 
-        <div class="card">
-            <h2>Déforestation Coloniale</h2>
-            <table class="environment-table">
-                <thead>
-                    <tr>
-                        <th>Période</th>
-                        <th>Zone Touchée</th>
-                        <th>Cause Principale</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1900-1920</td>
-                        <td>Côte Est</td>
-                        <td>Culture du café</td>
-                    </tr>
-                    <tr>
-                        <td>1920-1940</td>
-                        <td>Hauts Plateaux</td>
-                        <td>Exploitation forestière</td>
-                    </tr>
-                    <tr>
-                        <td>1940-1960</td>
-                        <td>Sud-Ouest</td>
-                        <td>Agriculture extensive</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <section class="deforestation-section">
+                <h2>Déforestation Coloniale</h2>
+                <table class="environment-table">
+                    <thead>
+                        <tr>
+                            <th>Période</th>
+                            <th>Zone Touchée</th>
+                            <th>Surface Perdue</th>
+                            <th>Cause Principale</th>
+                            <th>Impact Écologique</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1900-1920</td>
+                            <td>Côte Est</td>
+                            <td>500,000 ha</td>
+                            <td>Culture du café</td>
+                            <td>Perte biodiversité</td>
+                        </tr>
+                        <tr>
+                            <td>1920-1940</td>
+                            <td>Hauts Plateaux</td>
+                            <td>750,000 ha</td>
+                            <td>Exploitation forestière</td>
+                            <td>Érosion des sols</td>
+                        </tr>
+                        <tr>
+                            <td>1940-1960</td>
+                            <td>Sud-Ouest</td>
+                            <td>300,000 ha</td>
+                            <td>Agriculture extensive</td>
+                            <td>Désertification</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-        <section class="content-grid">
-            <div class="card">
-                <h2>Biodiversité</h2>
-                <ul class="eco-list">
-                    <li>Impact sur la faune endémique</li>
-                    <li>Modification des écosystèmes</li>
-                    <li>Programmes de conservation</li>
-                </ul>
+            <div class="content-grid">
+                <section class="biodiversity-section">
+                    <h2>Impact sur la Biodiversité</h2>
+                    <div class="biodiversity-content">
+                        <h3>Espèces Endémiques</h3>
+                        <ul>
+                            <li>Diminution des populations de lémuriens</li>
+                            <li>Perte d'habitats naturels</li>
+                            <li>Fragmentation des écosystèmes</li>
+                        </ul>
+                        <h3>Mesures de Conservation</h3>
+                        <ul>
+                            <li>Création des premières réserves</li>
+                            <li>Études scientifiques coloniales</li>
+                            <li>Programmes de protection</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <aside class="landscape-changes">
+                    <h2>Transformation des Paysages</h2>
+                    <div class="landscape-grid">
+                        <div class="landscape-item">
+                            <h3>Agriculture Coloniale</h3>
+                            <ul>
+                                <li>Introduction de nouvelles cultures</li>
+                                <li>Modification des pratiques agricoles</li>
+                                <li>Impact sur les sols</li>
+                            </ul>
+                        </div>
+                        <div class="landscape-item">
+                            <h3>Héritage Environnemental</h3>
+                            <ul>
+                                <li>Zones protégées actuelles</li>
+                                <li>Défis de conservation</li>
+                                <li>Restauration écologique</li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
             </div>
-
-            <div class="card">
-                <h2>Transformation des Paysages</h2>
-                <p>Introduction de nouvelles cultures</p>
-                <p>Modification des systèmes agricoles</p>
-                <p>Impact sur les sols</p>
-            </div>
-        </section>
+        </article>
     </main>
 
-    <footer>
-        <p>© 2024 - Histoire de Madagascar | Tous droits réservés</p>
-    </footer>
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>À propos</h4>
+            <p>Site éducatif sur l'histoire coloniale de Madagascar</p>
+        </div>
+        <div class="footer-section">
+            <h4>Ressources</h4>
+            <ul class="footer-links">
+                <li><a href="liens-utiles.html">Liens Utiles</a></li>
+                <li><a href="sources.html">Sources</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>contact@histoire-madagascar.org</p>
+        </div>
+        <p class="copyright">© 2024 - Histoire de Madagascar | Tous droits réservés</p>
+    </div>
+</footer>
+
 </body>
 </html>

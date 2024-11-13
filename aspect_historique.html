@@ -8,74 +8,123 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="site-header">
+        <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="aspect_historique.html">Histoire</a></li>
                 <li><a href="aspect_economie.html">Économie</a></li>
                 <li><a href="aspect_environnement.html">Environnement</a></li>
                 <li><a href="aspect_societal.html">Social</a></li>
+                <li><a href="aspect_scientifique.html">Science</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <h1>Histoire de la Colonisation de Madagascar</h1>
+    <main class="site-main">
+        <article class="main-content">
+            <h1>Histoire de la Colonisation de Madagascar</h1>
 
-        <div class="card">
-            <h2>Chronologie Coloniale</h2>
-            <table class="history-table">
-                <thead>
-                    <tr>
-                        <th>Période</th>
-                        <th>Événements</th>
-                        <th>Impact</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1896</td>
-                        <td>Annexion par la France</td>
-                        <td>Début de la période coloniale française</td>
-                    </tr>
-                    <tr>
-                        <td>1947</td>
-                        <td>Insurrection malgache</td>
-                        <td>Mouvement majeur de résistance</td>
-                    </tr>
-                    <tr>
-                        <td>1960</td>
-                        <td>Indépendance</td>
-                        <td>Naissance de la République malgache</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <section class="timeline-section">
+                <h2>Chronologie Coloniale</h2>
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>Période</th>
+                            <th>Événements</th>
+                            <th>Impact</th>
+                            <th>Figures Clés</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1883-1896</td>
+                            <td>Guerres franco-malgaches</td>
+                            <td>Affaiblissement du royaume Merina</td>
+                            <td>Reine Ranavalona III</td>
+                        </tr>
+                        <tr>
+                            <td>1896</td>
+                            <td>Annexion par la France</td>
+                            <td>Début de la période coloniale française</td>
+                            <td>Gallieni</td>
+                        </tr>
+                        <tr>
+                            <td>1947</td>
+                            <td>Insurrection malgache</td>
+                            <td>Mouvement majeur de résistance</td>
+                            <td>Leaders nationalistes</td>
+                        </tr>
+                        <tr>
+                            <td>1960</td>
+                            <td>Indépendance</td>
+                            <td>Naissance de la République malgache</td>
+                            <td>Philibert Tsiranana</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-        <section class="content-grid">
-            <div class="card">
-                <h2>Les Premiers Contacts (1500-1800)</h2>
-                <p>Exploration portugaise et premiers comptoirs commerciaux européens.</p>
-                <p>Relations avec les royaumes malgaches.</p>
+            <div class="content-grid">
+                <section class="historical-period">
+                    <h2>Période Précoloniale (1500-1896)</h2>
+                    <div class="period-content">
+                        <h3>Royaume Merina</h3>
+                        <ul>
+                            <li>Unification de l'île sous Andrianampoinimerina</li>
+                            <li>Modernisation sous Radama I</li>
+                            <li>Influence britannique et française</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="colonial-period">
+                    <h2>Administration Coloniale (1896-1960)</h2>
+                    <div class="period-content">
+                        <h3>Réformes Majeures</h3>
+                        <ul>
+                            <li>Système administratif français</li>
+                            <li>Politique d'assimilation</li>
+                            <li>Développement des infrastructures</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <aside class="historical-impact">
+                    <h2>Héritage Colonial</h2>
+                    <div class="impact-content">
+                        <h3>Conséquences Durables</h3>
+                        <ul>
+                            <li>Structure administrative actuelle</li>
+                            <li>Système éducatif</li>
+                            <li>Relations internationales</li>
+                        </ul>
+                    </div>
+                </aside>
             </div>
-
-            <div class="card">
-                <h2>La Période Merina (1800-1896)</h2>
-                <p>Unification sous le royaume Merina.</p>
-                <p>Influences britanniques et françaises croissantes.</p>
-            </div>
-
-            <div class="card">
-                <h2>Colonisation Française (1896-1960)</h2>
-                <p>Établissement du protectorat français.</p>
-                <p>Réformes administratives et économiques.</p>
-            </div>
-        </section>
+        </article>
     </main>
 
-    <footer>
-        <p>© 2024 - Histoire de Madagascar | Tous droits réservés</p>
-    </footer>
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>À propos</h4>
+            <p>Site éducatif sur l'histoire coloniale de Madagascar</p>
+        </div>
+        <div class="footer-section">
+            <h4>Ressources</h4>
+            <ul class="footer-links">
+                <li><a href="liens-utiles.html">Liens Utiles</a></li>
+                <li><a href="sources.html">Sources</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>contact@histoire-madagascar.org</p>
+        </div>
+        <p class="copyright">© 2024 - Histoire de Madagascar | Tous droits réservés</p>
+    </div>
+</footer>
+
 </body>
 </html>
